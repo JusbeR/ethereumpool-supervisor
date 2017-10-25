@@ -3,6 +3,7 @@
 ## Installing
 
 `sudo pip install requests`
+
 `wget https://raw.githubusercontent.com/JusbeR/nanopool-supervisor/master/nanopool-supervisor.py`
 
 ### systemd
