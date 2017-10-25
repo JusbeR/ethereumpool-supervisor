@@ -76,7 +76,7 @@ else:
     loggingLevel = logging.INFO
 
 if(logToFile):
-    logging.basicConfig(filename=scriptLocation + '/' + os.path.splitext(__file__)[0] + '.log', level=loggingLevel)
+    logging.basicConfig(filename=scriptLocation + '/' + os.path.splitext(os.path.basename(__file__))[0] + '.log', level=loggingLevel)
 else:
     logging.basicConfig(level=loggingLevel)
 
