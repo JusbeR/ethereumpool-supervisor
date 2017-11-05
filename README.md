@@ -1,10 +1,10 @@
-# nanopool-supervisor
+# ethereumpool-supervisor
 
 ## Installing
 
 `sudo pip install requests`
 
-`wget https://raw.githubusercontent.com/JusbeR/nanopool-supervisor/master/nanopool-supervisor.py`
+`wget https://raw.githubusercontent.com/JusbeR/ethereumpool-supervisor/master/ethereumpool-supervisor.py`
 
 ### systemd
 Put this to:
@@ -17,7 +17,7 @@ Description=Start nanopol supervisor
 [Service]
 
 WorkingDirectory=/home/<full_path_to_script_location/
-ExecStart=/usr/bin/python /home/<full_path_to_script_location/nanopool-supervisor.py -l 0x123456<the ethereum address being watched, that is>
+ExecStart=/usr/bin/python /home/<full_path_to_script_location/ethereumpool-supervisor.py -l 0x123456<the ethereum address being watched, that is>
 Restart=always
 
 [Install]
@@ -30,7 +30,7 @@ WantedBy=multi-user.target
 `sudo systemctl enable miningSupervision.service`
 
 ### Check
-`cat <full_path_to_script_location>/nanopool-supervisor.log`
+`cat <full_path_to_script_location>/ethereumpool-supervisor.log`
 
 Should show something like:
 ```
@@ -46,6 +46,6 @@ U R kidding?
 
 ## Running
 
-`python nanopool-supervisor.py --help`
+`python ethereumpool-supervisor.py --help`
 
 Must be ran with sudo priviledges 'cos reboot won't work otherwise
