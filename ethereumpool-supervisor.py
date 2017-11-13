@@ -88,7 +88,7 @@ try:
         if(pool == 'nanopool'):
             ret = nanopool.checkHashRate(ethereumAddress, worker, hashRateLowerLimit)
         elif(pool == 'ethermine'):
-            ret = ethermine.checkHashRate(ethereumAddress, worker, hashRateLowerLimit)
+            ret = ethermine.check_hash_rate(ethereumAddress, worker, hashRateLowerLimit)
         else:
             logging.error('Unknown pool "' + pool + '"')
             sys.exit(1)
