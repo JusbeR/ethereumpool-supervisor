@@ -4,7 +4,9 @@
 
 `sudo pip install requests`
 
-`wget https://raw.githubusercontent.com/JusbeR/ethereumpool-supervisor/master/ethereumpool-supervisor.py`
+`wget -q -O - https://raw.githubusercontent.com/JusbeR/ethereumpool-supervisor/master/get.sh | bash`
+
+or just download .py files
 
 ### systemd
 Put this to:
