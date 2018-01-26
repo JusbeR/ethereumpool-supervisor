@@ -94,6 +94,7 @@ try:
                     logging.warning('One GPU is using too little power (' + str(gpuPower) + 'W)')
                     oneGpuProblem = True
                 totalPowerUsed += gpuPower
+            logging.debug('Total power: ' + str(totalPowerUsed))
             if(totalPowerUsed < totalPower):
                 logging.warning('total power usage is too little (' + str(totalPowerUsed) + 'W)')
                 totalProblem = True

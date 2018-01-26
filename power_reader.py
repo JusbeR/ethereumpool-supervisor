@@ -9,7 +9,7 @@ def getGpuPowerArray():
     error = 0
     logging.debug('getGpuPowerArray()')
     try:
-        stdout = subprocess.check_output(['nvidia-smi', 'stats', '-d pwrDraw'])
+        stdout = subprocess.check_output(['nvidia-smi', 'stats', '-c', '1' ,'-d',  'pwrDraw'])
         logging.debug(stdout)
         powerDict = {}
         lines = stdout.splitlines()
@@ -27,6 +27,7 @@ def getGpuPowerArray():
         for gpu, powers in powerDict.items():
             # TODO: This is not sorted, so we mess up the gpu index here...
             powerArray.append(int(powers[0]/powers[1]))
+        logging.debug(powerArray)
         return 0, powerArray
     except subprocess.CalledProcessError as darn:
         logging.error('Failed to get stats')
