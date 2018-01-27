@@ -87,7 +87,8 @@ try:
         oneGpuProblem = False
         totalProblem = False
         if(error != 0):
-            logging.error('This script is now useless, see what is wrong an fix it')
+            logging.error('Could not read GPU powers, stack might be stuck')
+            startRebootThread()
         else:
             for gpuPower in gpuPowerArray:
                 if(oneGpuPower > 0 and gpuPower < oneGpuPower):
