@@ -26,10 +26,10 @@ This script is used to check if GPU cards are spending "enough" power.\n\
 If not, reboot is tried as recovery action.\n',
 formatter_class=RawTextHelpFormatter)
 
-parser.add_argument("--interval", help='How often(minutes) to check the power consumption.', default=1, type=int)
-parser.add_argument("--wait_reboot", help='How long to wait before rebooting after problems detected', default=10, type=int)
-parser.add_argument("--total_power", help='Minimum acceptable total power consumption(W)', default=1000, type=int)
-parser.add_argument("--one_gpu_power", help='Minimum acceptable total power consumption(W) in one GPU(0=disbled)', default=0, type=int)
+parser.add_argument("--interval", help='How often(minutes) to check the power consumption. default 1', default=1, type=int)
+parser.add_argument("--wait_reboot", help='How long to wait before rebooting after problems detected default 10', default=10, type=int)
+parser.add_argument("--total_power", help='Minimum acceptable total power consumption(W) default 1000', default=1000, type=int)
+parser.add_argument("--one_gpu_power", help='Minimum acceptable total power consumption(W) in one GPU(0=disbled), default 0', default=0, type=int)
 parser.add_argument("-v", "--verbose", action="store_true", help="Print debug logs")
 parser.add_argument("-l", "--log_to_file", action="store_true", help="Print to file, instead of stdout")
 
